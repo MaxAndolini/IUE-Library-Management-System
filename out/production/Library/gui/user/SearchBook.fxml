@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.SearchBookController">
+   <children>
+      <Pane fx:id="mainpane" layoutX="11.0" layoutY="111.0" prefHeight="502.0" prefWidth="167.0" style="-fx-border-color: #000000;">
+         <children>
+            <Pane layoutX="7.0" layoutY="7.0" prefHeight="38.0" prefWidth="150.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Text fx:id="options" fill="#ce201c" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" textAlignment="CENTER" wrappingWidth="150.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="profilebutton" layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#profileButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Profile" textFill="WHITE" />
+            <Button fx:id="searchbookbutton" layoutX="7.0" layoutY="154.0" mnemonicParsing="false" onAction="#sbookButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Search Book" textFill="WHITE" />
+            <Button fx:id="bbooksbutton" layoutX="7.0" layoutY="256.0" mnemonicParsing="false" onAction="#bbooksButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Borrowed Books" textFill="WHITE" />
+            <Button fx:id="eprofilebutton" layoutX="7.0" layoutY="358.0" mnemonicParsing="false" onAction="#eprofileButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Edit Profile" textFill="WHITE" />
+            <Button fx:id="cpasswordbutton" layoutX="7.0" layoutY="460.0" mnemonicParsing="false" onAction="#cpasswordButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Change Password" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="toppane" layoutX="-6.0" layoutY="-12.0" prefHeight="117.0" prefWidth="1072.0" style="-fx-background-color: #CE201C;">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="265.0" layoutX="11.0" layoutY="25.0">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="823.0" layoutY="70.0" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="15.0" prefWidth="112.0" style="-fx-background-color: #FCBB31;" text="Home" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="946.0" layoutY="70.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="15.0" prefWidth="112.0" style="-fx-background-color: #FCBB31;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Pane layoutX="360.0" layoutY="54.0" prefHeight="51.0" prefWidth="320.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Text fill="#fcbb31" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Book" textAlignment="CENTER" wrappingWidth="321.1429138183594">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="closeButton" layoutX="1033.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: #FCBB31;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15" />
+               </graphic></Button>
+            <Button fx:id="minimizeButton" layoutX="999.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleMinimizeButtonAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: #FCBB31;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="WINDOW_MINIMIZE" size="10" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="bottompane" layoutX="-6.0" layoutY="619.0" prefHeight="38.0" prefWidth="1072.0" style="-fx-background-color: #CE201C;">
+         <children>
+            <ColorPicker fx:id="colorpicker" layoutX="933.0" layoutY="7.0" onAction="#changeColor" />
+            <Text fx:id="dbconnect" fill="#fcbb31" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="● Database not connected" wrappingWidth="206.47628784179688">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="193.0" layoutY="111.0" prefHeight="502.0" prefWidth="859.0">
+         <children>
+            <TextField fx:id="sbox" layoutX="14.0" layoutY="14.0" onKeyPressed="#enterSearchKey" prefHeight="34.0" prefWidth="273.0" promptText="Search Book" />
+            <Button fx:id="bsearchbutton" contentDisplay="CENTER" layoutX="297.0" layoutY="14.0" mnemonicParsing="false" onAction="#bSearchButtonAction" prefHeight="34.0" prefWidth="21.0" style="-fx-background-color: #CE201C;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fcbb31" glyphName="SEARCH" size="15" />
+               </graphic>
+            </Button>
+            <Button fx:id="brefreshbutton" contentDisplay="CENTER" layoutX="338.0" layoutY="14.0" mnemonicParsing="false" onAction="#bRefreshButtonAction" prefHeight="34.0" prefWidth="21.0" style="-fx-background-color: #CE201C;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="#fcbb31" glyphName="REFRESH" size="15" />
+               </graphic>
+            </Button>
+            <ComboBox fx:id="bstype" layoutX="379.0" layoutY="14.0" prefHeight="34.0" prefWidth="141.0" style="-fx-background-color: #CE201C;" />
+            <ComboBox fx:id="bscategory" layoutX="527.0" layoutY="14.0" prefHeight="34.0" prefWidth="141.0" style="-fx-background-color: #CE201C;" />
+            <TableView fx:id="table" layoutY="62.0" prefHeight="407.0" prefWidth="859.0">
+               <columns>
+                  <TableColumn fx:id="tid" editable="false" prefWidth="25.0" resizable="false" text="ID" />
+                  <TableColumn fx:id="ttitle" editable="false" prefWidth="210.0" resizable="false" text="Title" />
+                  <TableColumn fx:id="tauthor" editable="false" prefWidth="90.0" resizable="false" text="Author" />
+                  <TableColumn fx:id="tcategory" editable="false" prefWidth="120.0" resizable="false" text="Category" />
+                  <TableColumn fx:id="tshelf" editable="false" resizable="false" text="Shelf" />
+                  <TableColumn fx:id="tcreatedat" editable="false" prefWidth="135.0" resizable="false" text="Created At" />
+                  <TableColumn fx:id="tupdatedat" editable="false" prefWidth="135.0" resizable="false" text="Updated At" />
+                  <TableColumn fx:id="tavailable" editable="false" prefWidth="62.0" resizable="false" text="Available" />
+               </columns>
+            </TableView>
+            <Text fx:id="totalbook" fill="#ce201c" layoutX="629.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="[Total Book: 0]" textAlignment="RIGHT" wrappingWidth="216.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

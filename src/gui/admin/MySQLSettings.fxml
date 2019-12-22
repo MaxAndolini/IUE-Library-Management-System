@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.PasswordField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="1063.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.MySQLSettingsController">
+   <children>
+      <Pane fx:id="mainpane" layoutX="11.0" layoutY="111.0" prefHeight="502.0" prefWidth="167.0" style="-fx-border-color: #000000;">
+         <children>
+            <Pane layoutX="7.0" layoutY="7.0" prefHeight="38.0" prefWidth="150.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Text fx:id="options" fill="#ce201c" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Options" textAlignment="CENTER" wrappingWidth="150.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="madminbutton" layoutX="7.0" layoutY="52.0" mnemonicParsing="false" onAction="#madminButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage Admin" textFill="WHITE" />
+            <Button fx:id="mbookbutton" layoutX="7.0" layoutY="187.9" mnemonicParsing="false" onAction="#mbookButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage Book" textFill="WHITE" />
+            <Button fx:id="mshelfbutton" layoutX="7.0" layoutY="233.2" mnemonicParsing="false" onAction="#mshelfButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage Shelf" textFill="WHITE" />
+            <Button fx:id="mborrowerbutton" layoutX="7.0" layoutY="278.5" mnemonicParsing="false" onAction="#mborrowerButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage Borrower" textFill="WHITE" />
+            <Button fx:id="rbookbutton" layoutX="7.0" layoutY="323.8" mnemonicParsing="false" onAction="#rbookButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Retrieve Book" textFill="WHITE" />
+            <Button fx:id="eprofilebutton" layoutX="7.0" layoutY="414.4" mnemonicParsing="false" onAction="#eprofileButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Edit Profile" textFill="WHITE" />
+            <Button fx:id="cpasswordbutton" layoutX="7.0" layoutY="460.0" mnemonicParsing="false" onAction="#cpasswordButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Change Password" textFill="WHITE" />
+            <Button fx:id="muserbutton" layoutX="7.0" layoutY="142.6" mnemonicParsing="false" onAction="#muserButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage User" textFill="WHITE" />
+            <Button fx:id="mlibrarianbutton" layoutX="7.0" layoutY="97.3" mnemonicParsing="false" onAction="#mlibrarianButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Manage Librarian" textFill="WHITE" />
+            <Button fx:id="mysqlsettingbutton" layoutX="7.0" layoutY="369.1" mnemonicParsing="false" onAction="#mysqlsettingsButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="MySQL Settings" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="toppane" layoutX="-6.0" layoutY="-12.0" prefHeight="117.0" prefWidth="1072.0" style="-fx-background-color: #CE201C;">
+         <children>
+            <ImageView fitHeight="81.0" fitWidth="265.0" layoutX="11.0" layoutY="25.0">
+               <image>
+                  <Image url="@../../images/logo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="823.0" layoutY="70.0" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="15.0" prefWidth="112.0" style="-fx-background-color: #FCBB31;" text="Home" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button layoutX="946.0" layoutY="70.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="15.0" prefWidth="112.0" style="-fx-background-color: #FCBB31;" text="Log Out" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Pane layoutX="360.0" layoutY="54.0" prefHeight="51.0" prefWidth="320.0" style="-fx-border-color: #000000;">
+               <children>
+                  <Text fill="#fcbb31" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MySQL Settings" textAlignment="CENTER" wrappingWidth="321.1429138183594">
+                     <font>
+                        <Font size="28.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Button fx:id="closeButton" layoutX="1033.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: #FCBB31;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CLOSE" size="15" />
+               </graphic></Button>
+            <Button fx:id="minimizeButton" layoutX="999.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleMinimizeButtonAction" prefHeight="13.0" prefWidth="25.0" style="-fx-background-color: #FCBB31;" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView fill="WHITE" glyphName="WINDOW_MINIMIZE" size="10" />
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane fx:id="bottompane" layoutX="-6.0" layoutY="619.0" prefHeight="38.0" prefWidth="1072.0" style="-fx-background-color: #CE201C;">
+         <children>
+            <ColorPicker fx:id="colorpicker" layoutX="933.0" layoutY="7.0" onAction="#changeColor" />
+            <Text fx:id="dbconnect" fill="#fcbb31" layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="● Database not connected" wrappingWidth="206.47628784179688">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Pane layoutX="193.0" layoutY="111.0" prefHeight="502.0" prefWidth="859.0">
+         <children>
+          <TextField fx:id="surl" layoutX="330.0" layoutY="76.0" onKeyPressed="#enterAddKey" prefHeight="34.0" prefWidth="194.0" promptText="URL" />
+         <Button fx:id="savebutton" layoutX="352.0" layoutY="292.0" mnemonicParsing="false" onAction="#SaveButtonAction" prefHeight="34.0" prefWidth="150.0" style="-fx-background-color: #CE201C;" text="Save" textFill="WHITE" />
+         <Text fx:id="invalid" fill="#ce201c" layoutX="266.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Error:" textAlignment="CENTER" visible="false" wrappingWidth="321.1429138183594" />
+            <TextField fx:id="susername" layoutX="330.0" layoutY="148.0" onKeyPressed="#enterAddKey" prefHeight="34.0" prefWidth="194.0" promptText="Username" />
+            <PasswordField fx:id="spassword" layoutX="330.0" layoutY="220.0" onKeyPressed="#enterAddKey" prefHeight="34.0" prefWidth="194.0" promptText="Password" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
