@@ -130,7 +130,7 @@ public class ManageShelfController
             e.printStackTrace();
         }
 
-        totalshelf.setText("[Total User: " + table.getItems().size() + "]");
+        totalshelf.setText("[Total Shelf: " + table.getItems().size() + "]");
 
         tname.setCellFactory(TextFieldTableCell.forTableColumn());
     }
